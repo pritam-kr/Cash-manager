@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.137);
+}
+.container{
+    padding: 40px 0;
+    justify-content: center;
+    display: flex;
+}
+.manager{
+    text-align: center;
+    width: 700px;
+    max-width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.062);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.manager header img{
+    width: 200px;
+    height: 150px;
+    max-width: 100%;
+}
+.manager header h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.4rem;
+}
+.manager header p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+.manager main input{
+    padding: 10px;
+    width: 80%;
+    margin: 5px;
+}
+.manager main input:focus{
+    outline: none;
+}
+.manager main .btn-container{
+    margin: 15px 0;
+}
+.manager main .btn-container button{
+    padding: 10px 20px;
+    cursor: pointer;
+}
