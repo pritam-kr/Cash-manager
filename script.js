@@ -5,11 +5,20 @@ const noteList = document.querySelectorAll(".note");
 
 cashForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
+ 
   var billValue = Number(amountInputs[0].value);
   var cashGiven = Number(amountInputs[1].value);
 
-  // console.log(billValue, cashGiven)
+  if (billValue === 0 || cashGiven === 0) {
+        blankMess = `<div class="result">Bill and cash field can not blank. </div>`;
+        document.querySelector(".output").innerHTML = blankMess;
+  }else if (billValue > cashGiven) {
+    blankMess = `<div class="result">Given cash is less than bill, Please enter a valid ammount </div>`
+    document.querySelector('.output').innerHTML = blankMess;
+    }else{
+        document.querySelector('.result').style.display = 'none';
+    }
+
   calculateNotes(billValue, cashGiven);
 });
 
@@ -30,3 +39,4 @@ function compare(rtnAmt, arrayN, idx) {
   }
   return rtnAmt;
 }
+
