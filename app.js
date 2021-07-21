@@ -5,7 +5,7 @@ const noteList = document.querySelectorAll('.note')
 
 form.addEventListener('submit', (e) =>{
     e.preventDefault()
-
+    clearNoOfNotes()
     var billValue = Number(amountInputs[0].value);
     var cashGiven = Number(amountInputs[1].value);
     
@@ -54,4 +54,10 @@ function compare(rtnAmt, arrayN, idx){
         
     }
     return rtnAmt
+}
+
+function clearNoOfNotes(){
+    for(let notess of noteList){
+        notess.innerText = "";
+    }
 }

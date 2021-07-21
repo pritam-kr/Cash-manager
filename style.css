@@ -7,6 +7,7 @@
 body{
     background-color: rgba(0, 0, 0, 0.137);
 }
+
 .container{
     padding: 40px 0;
     justify-content: center;
@@ -14,12 +15,20 @@ body{
 }
 .manager{
     text-align: center;
-    width: 700px;
+    width: 900px;
     max-width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.062);
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.manager header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 .manager header img{
     width: 200px;
@@ -34,6 +43,8 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.2rem;
     margin: 15px 0;
+    width: 80%;
+    text-align: center;
 }
 .manager main input{
     padding: 10px;
