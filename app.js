@@ -40,17 +40,18 @@ function calculateNotes(bill, cash) {
         document.querySelector('.output').innerHTML = mess;
     }
 
-    for (i = 0; i < myNotes.length; i++) {
+    for (let i=0; i < myNotes.length; i++) {
         amountReturns = compare(amountReturn, myNotes[i], i);
     }
 }
 
 function compare(rtnAmt, arrayN, idx) {
-         console.log(rtnAmt, arrayN, idx)
+        //  console.log(rtnAmt, arrayN, idx)
     if (rtnAmt >= arrayN) {
         let notes = Math.floor(rtnAmt / arrayN);
         // console.log(notes)
-        rtnAmt = rtnAmt - notes * arrayN;
+        rtnAmt = rtnAmt - notes*arrayN;
+        console.log(rtnAmt)
         noteList[idx].innerHTML = `${notes}`;
 
     }
