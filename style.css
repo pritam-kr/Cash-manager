@@ -50,3 +50,12 @@ body{
     padding: 10px 20px;
     cursor: pointer;
 }
+.output{
+    display: flex;
+    justify-content: center;
+}
+.result{
+    padding: 20px;
+    background-color: rgba(255, 0, 0, 0.356);
+    width: 80%;
+}
