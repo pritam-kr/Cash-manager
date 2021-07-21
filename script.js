@@ -6,7 +6,9 @@ const btnNext = document.querySelector('.btn-next') ;
 
 btnNext.addEventListener('click', (el) => {
     el.preventDefault()
-    document.querySelector('.cash-input').style.display = 'block';
+    if(amountInputs[0].value>0){
+        document.querySelector('.cash-input').style.display = 'block';
+    }
 })
 
 cashForm.addEventListener("submit", (e) => {
@@ -23,8 +25,10 @@ cashForm.addEventListener("submit", (e) => {
     document.querySelector('.output').innerHTML = blankMess;
     }else if(cashGiven > billValue) {
         calculateNotes(billValue, cashGiven);
+        document.querySelector('.result').style.display = 'none'
     }
 
+  
   
 });
 
