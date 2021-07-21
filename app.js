@@ -35,7 +35,7 @@ function calculateNotes(bill, cash) {
     let amountReturn = cash - bill;
     // console.log(amountReturn)
 
-    if (amountReturn === 0) {
+    if (amountReturn < 1) {
         mess = `<div class="result"> No amount would be returned </div>`
         document.querySelector('.output').innerHTML = mess;
     }
@@ -62,3 +62,7 @@ function clearNoOfNotes() {
         notess.innerText = "";
     }
 }
+
+// function showError(err){
+
+// }
