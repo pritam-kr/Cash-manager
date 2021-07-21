@@ -2,6 +2,12 @@ const cashForm = document.querySelector(".form");
 const amountInputs = document.querySelectorAll("input");
 var myNotes = [2000, 500, 100, 20, 10, 5, 1];
 const noteList = document.querySelectorAll(".note");
+const btnNext = document.querySelector('.btn-next') ;
+
+btnNext.addEventListener('click', (el) => {
+    el.preventDefault()
+    document.querySelector('.cash-input').style.display = 'block';
+})
 
 cashForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -9,17 +15,17 @@ cashForm.addEventListener("submit", (e) => {
   var billValue = Number(amountInputs[0].value);
   var cashGiven = Number(amountInputs[1].value);
 
-  if (billValue === 0 || cashGiven === 0) {
-        blankMess = `<div class="result">Bill and cash field can not blank. </div>`;
+  if (billValue === 0 && cashGiven === 0) {
+        blankMess = `<div class="result">Please enter cash  </div>`;
         document.querySelector(".output").innerHTML = blankMess;
   }else if (billValue > cashGiven) {
     blankMess = `<div class="result">Given cash is less than bill, Please enter a valid ammount </div>`
     document.querySelector('.output').innerHTML = blankMess;
-    }else{
-        document.querySelector('.result').style.display = 'none';
+    }else if(cashGiven > billValue) {
+        calculateNotes(billValue, cashGiven);
     }
 
-  calculateNotes(billValue, cashGiven);
+  
 });
 
 function calculateNotes(bill, cash) {

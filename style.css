@@ -125,3 +125,22 @@ footer ul li{
     font-size: 1.4rem;
     margin: 5px;
 }
+
+.cash-input{
+    display: none;
+}
+
+.bill-inputs .btn-next{
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid rgb(36, 135, 248);
+    border-radius: 5px;
+    background-color: rgb(36, 135, 248);
+    color: #fff;
+    transition: 0.2s ease-in;
+    margin: 10px;
+}
+
+.bill-inputs .btn-next:hover{
+    background-color: rgb(11, 89, 179);
+}
