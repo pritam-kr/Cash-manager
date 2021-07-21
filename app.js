@@ -33,7 +33,7 @@ function calculateNotes(bill, cash){
 
     //  console.log(amountReturn)
 
-    if(amountReturn == 0){
+    if(amountReturn < 1){
         mess = `<div class="result"> No amount would be returned </div>`
         document.querySelector('.output').innerHTML = mess;
     }
@@ -48,7 +48,7 @@ function compare(rtnAmt, arrayN, idx){
 
     if(rtnAmt >= arrayN){
         let notes = Math.floor(rtnAmt/arrayN);
-        console.log(notes)
+        // console.log(notes)
         rtnAmt = rtnAmt - notes*arrayN;
          noteList[idx].innerHTML = `${notes}`;
         

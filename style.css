@@ -90,3 +90,16 @@ table td{
     margin: 10px 0;
     justify-content: center;
 }
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+footer ul li{
+    list-style-type: none;
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 5px;
+}
