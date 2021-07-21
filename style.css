@@ -15,7 +15,7 @@ body{
 }
 .manager{
     text-align: center;
-    width: 900px;
+    width: 1000px;
     max-width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.062);
     padding: 20px;
@@ -45,6 +45,9 @@ body{
     margin: 15px 0;
     width: 80%;
     text-align: center;
+}
+.manager main{
+    width: 90%;
 }
 .manager main input{
     padding: 10px;
@@ -78,6 +81,7 @@ table th{
      text-align: center;
      border: 1px solid #000;
      padding: 10px;
+     width: 50px;
 }
 table td{
     text-align: center;
