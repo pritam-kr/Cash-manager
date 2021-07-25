@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Pritam Kumar">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <title>Cash manager</title>
 </head>
+
 <body>
     <div class="container">
-        <div class="cash-container">
-           <div class="manager">
-               <header>
-                   <img src="/rmb.png" alt="">
-                   <h4>Cash Manager</h4>
-                   <p>Enter the bill amount and cash given and know minimum number of notes to return.</p>
-               </header>
-               <main class="main">
-                    <form action="" class="form">
-                        <div class="bill-inputs">
-                            <input type="number" id="bill" placeholder="Enter bill amount"><br>
-                            <button class="btn-next">Next</button>
-                        </div>
-
-                        <div class="cash-input">
-                            <input type="number" id="cash-give" placeholder="Cash given">
-                            <div class="btn-container">
-                                <button type="submit" class="btn-submit">Check</button>
-                            </div>
-                        </div>
-
-                        
-                    </form>
-
-                    <div class="output">
-                         
+        <div class="manager">
+            <header>
+                <img src="/rmb.png" alt="">
+                <h4>Cash Manager</h4>
+                <p>Enter the bill amount and cash given and know minimum number of notes to return.</p>
+            </header>
+            <main class="main">
+                <form action="" class="form">
+                    <div class="bill-inputs">
+                        <input type="number" id="bill" placeholder="Enter bill amount"><br>
+                        <button class="btn-next">Next</button>
                     </div>
 
-                    <div class="output-note">
-                        <table>
-                            <tr>
+                    <div class="cash-input">
+                        <input type="number" id="cash-give" placeholder="Cash given">
+                        <div class="btn-container">
+                            <button type="submit" class="btn-submit">Check</button>
+                        </div>
+                    </div>
+
+
+                </form>
+
+                <div class="output">
+
+                </div>
+
+                <div class="output-note">
+                    <table>
+                        <tr>
                             <th>No.of Notes</td>
                             <td class="note"></td>
                             <td class="note"></td>
@@ -50,8 +57,8 @@
                             <td class="note"></td>
                             <td class="note"></td>
                             <td class="note"></td>
-                            </tr>
-                            <tr>
+                        </tr>
+                        <tr>
                             <th>Note</td>
                             <td>2000</td>
                             <td>500</td>
@@ -60,34 +67,37 @@
                             <td>10</td>
                             <td>5</td>
                             <td>1</td>
-                            </tr>
-                        </table>
-                    </div>
-               </main>
-           </div>
+                        </tr>
+                    </table>
+                </div>
+            </main>
+            <footer class="footer">
+                <ul>
+                    <li>
+                        <a href="https://neogcamp-portfolio-of-pritam.netlify.app/index.html" target="_blank"><i
+                                class="fas fa-globe-asia"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/pritam-kr/Cash-manager" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/pritam_kr30/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/pritam-kumar-0ab3431bb/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/Pritamkr_" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </li>
+                </ul>
 
-           <footer class="footer">
-            <ul>
-                <li>
-                    <a href="https://github.com/pritam-kr/Cash-manager" target="_blank"><i
-                            class="fab fa-github"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/pritam_kr30/" target="_blank"><i
-                            class="fab fa-instagram"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/pritam-kumar-0ab3431bb/" target="_blank"><i
-                            class="fab fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/Pritamkr_" target="_blank"><i class="fab fa-twitter"></i></a>
-                </li>
-            </ul>
-
-        </footer>
+            </footer>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
