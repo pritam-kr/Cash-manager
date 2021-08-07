@@ -49,7 +49,9 @@ function compare(rtnAmt, arrayN, idx) {
 
   if (rtnAmt >= arrayN) {
     let notes = Math.floor(rtnAmt / arrayN);
+
     rtnAmt = rtnAmt - notes * arrayN;
+    // console.log(rtnAmt)
     noteList[idx].innerHTML = `${notes}`;
    
   }
