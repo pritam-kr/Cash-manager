@@ -8,6 +8,7 @@ btnNext.addEventListener("click", (el) => {
   el.preventDefault();
   if (amountInputs[0].value > 0) {
     document.querySelector(".cash-input").style.display = "block";
+    btnNext.style.display = 'none';
   }
 });
 
@@ -18,7 +19,7 @@ cashForm.addEventListener("submit", (e) => {
   var cashGiven = Number(amountInputs[1].value);
 
   if (billValue === 0 && cashGiven === 0) {
-    blankMess = `<div class="result">Please enter bill amount  </div>`;
+    blankMess = `<div class="result">Please enter valid amount  </div>`;
     document.querySelector(".output").innerHTML = blankMess;
   } else if (billValue > cashGiven) {
     blankMess = `<div class="result">Given cash is less than bill, Please enter a valid ammount </div>`;
@@ -33,7 +34,7 @@ function calculateNotes(bill, cash) {
   let returnAmount = cash - bill;
   for (i = 0; i < myNotes.length; i++) {
     returnAmount = compare(returnAmount, myNotes[i], i);
-    // console.log(returnAmount);
+    console.log(returnAmount);
   }
 }
 
