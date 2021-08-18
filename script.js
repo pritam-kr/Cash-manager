@@ -36,24 +36,19 @@ cashForm.addEventListener("submit", (e) => {
 });
 
 function calculateNotes(bill, cash) {
-  let returnAmount = cash - bill;
 
-  for (i = 0; i < myNotes.length; i++) {
-    returnAmount = compare(returnAmount, myNotes[i], i);
+
+  if (cash >= bill) {
+    const returnAmount = cash - bill;
+    calculateTheChage(returnAmount)
   }
+
 }
 
-function compare(rtnAmt, arrayN, idx) {
-  //  console.log(rtnAmt, arrayN);
-  //  console.log(rtnAmt >= arrayN)
-
-  if (rtnAmt >= arrayN) {
-    let notes = Math.floor(rtnAmt / arrayN);
-
-    rtnAmt = rtnAmt - notes * arrayN;
-    // console.log(rtnAmt)
-    noteList[idx].innerHTML = `${notes}`;
-   
+function calculateTheChage(retnAmt) {
+  for (i = 0; i < myNotes.length; i++) {
+    const numberOfNotes = Math.trunc(retnAmt / myNotes[i])
+    retnAmt %= myNotes[i]
+    noteList[i].innerText = numberOfNotes;
   }
-  return rtnAmt;
 }
