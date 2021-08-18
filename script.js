@@ -29,25 +29,21 @@ cashForm.addEventListener("submit", (e) => {
   } else if (billValue > cashGiven) {
     blankMess = `<div class="result">Given cash can not be less than bill, Please enter a valid ammount </div>`;
     document.querySelector(".output").innerHTML = blankMess;
-  } else if (cashGiven > billValue) {
+  } else if (cashGiven >= billValue) {
     calculateNotes(billValue, cashGiven);
     document.querySelector(".output").style.display = 'none'
   }
 });
 
 function calculateNotes(bill, cash) {
-
-
-  if (cash >= bill) {
     const returnAmount = cash - bill;
     calculateTheChage(returnAmount)
-  }
-
 }
 
 function calculateTheChage(retnAmt) {
   for (i = 0; i < myNotes.length; i++) {
     const numberOfNotes = Math.trunc(retnAmt / myNotes[i])
+
     retnAmt %= myNotes[i]
     noteList[i].innerText = numberOfNotes;
   }
