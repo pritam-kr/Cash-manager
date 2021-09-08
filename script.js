@@ -23,28 +23,36 @@ cashForm.addEventListener("submit", (e) => {
   let billValue = Number(amountInputs[0].value);
   let cashGiven = Number(amountInputs[1].value);
 
-  if (billValue === 0 && cashGiven === 0) {
-    blankMess = `<div class="result">Please enter valid amount  </div>`;
-    document.querySelector(".output").innerHTML = blankMess;
+  if (billValue == cashGiven) {
+    showMessage("No loss, No pain");
+    document.querySelector(".output").style.display = "flex";
+
   } else if (billValue > cashGiven) {
-    blankMess = `<div class="result">Given cash can not be less than bill, Please enter a valid ammount </div>`;
-    document.querySelector(".output").innerHTML = blankMess;
+    showMessage("Given cash can not be less than bill, Please enter a valid ammount");
+    document.querySelector(".output").style.display = "flex";
+    
   } else if (cashGiven >= billValue) {
     calculateNotes(billValue, cashGiven);
-    document.querySelector(".output").style.display = 'none'
+    document.querySelector(".output").style.display = "none";
   }
 });
 
 function calculateNotes(bill, cash) {
-    const returnAmount = cash - bill;
-    calculateTheChage(returnAmount)
+  const returnAmount = cash - bill;
+  calculateTheChage(returnAmount);
 }
 
 function calculateTheChage(retnAmt) {
   for (i = 0; i < myNotes.length; i++) {
-    const numberOfNotes = Math.trunc(retnAmt / myNotes[i])
-
-    retnAmt %= myNotes[i]
+    const numberOfNotes = Math.trunc(retnAmt / myNotes[i]);
+    retnAmt %= myNotes[i];
     noteList[i].innerText = numberOfNotes;
   }
+}
+
+
+// Show message
+function showMessage(mess) {
+  var blankMess = `<div class="result">${mess}</div>`;
+  document.querySelector(".output").innerHTML = blankMess;
 }
