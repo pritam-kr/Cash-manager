@@ -44,11 +44,12 @@ function calculateNotes(bill, cash) {
 
 function calculateTheChage(retnAmt) {
   for (i = 0; i < myNotes.length; i++) {
-    const numberOfNotes = Math.trunc(retnAmt / myNotes[i]);
-    retnAmt %= myNotes[i];
+    const numberOfNotes = Math.trunc(retnAmt / myNotes[i]); 
+    retnAmt %= myNotes[i]; 
+    // retnAmt = retnAmt % myNotes
     noteList[i].innerText = numberOfNotes;
   }
-}
+} 
 
 
 // Show message
